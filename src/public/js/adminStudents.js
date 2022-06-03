@@ -17,7 +17,7 @@ for (let i = 0; i < sidebarItemLength; i++) {
 }
 
 document.querySelector(".adding_students").addEventListener("click", () => {
-    fetch("http://localhost:9000/admin/studentpost", {
+    fetch("https://crmuz.herokuapp.com/admin/studentpost", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -38,7 +38,7 @@ const putStudentDataGroupId = document.querySelector("#exampleDataList2004")
 
 document.querySelector(".table-body-students").addEventListener("click", async(e) => {
     if (e.target.matches(".delete_btn_student")) {
-        fetch(`http://localhost:9000/admin/studentdelete/${e.target.id}`, { method: "DELETE" })
+        fetch(`https://crmuz.herokuapp.com/admin/studentdelete/${e.target.id}`, { method: "DELETE" })
         window.location.reload()
     } else if (e.target.matches(".edit_btn_students")) {
         const res = await fetch(`/admin/studentgetupdate/${e.target.id}`, { method: "PUT" })

@@ -18,7 +18,7 @@ for (let i = 0; i < sidebarItemLength; i++) {
 
 document.querySelector(".adding_teacher").addEventListener("click", () => {
 
-    fetch('http://localhost:9000/admin/teacherpost', {
+    fetch('https://crmuz.herokuapp.com/admin/teacherpost', {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -42,7 +42,7 @@ const putTeacherDataCourseId = document.querySelector("#exampleDataList131")
 
 document.querySelector(".table-body-teachers").addEventListener("click", async(e) => {
     if (e.target.matches(".delete_btn_teacher")) {
-        fetch(`http://localhost:9000/admin/teacherdelete/${e.target.id}`, { method: "DELETE" })
+        fetch(`https://crmuz.herokuapp.com/admin/teacherdelete/${e.target.id}`, { method: "DELETE" })
         window.location.reload()
     } else if (e.target.matches(".edit_btn_teacher")) {
         const res = await fetch(`/admin/teachergetupdate/${e.target.id}`, { method: "PUT" })

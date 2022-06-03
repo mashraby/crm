@@ -13,7 +13,7 @@ const UPLOAD_HOMEWORK = (req, res) => {
     allHomeworks.push({
         id: new Date().getTime(),
         name: foundUser.name,
-        homework_url: "http://localhost:9000/" + file.name,
+        homework_url: "https://crmuz.herokuapp.com/" + file.name,
         studentId: Number(id),
         groupId: foundUser.groupId
     })

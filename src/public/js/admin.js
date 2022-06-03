@@ -18,7 +18,7 @@ for (let i = 0; i < sidebarItemLength; i++) {
 }
 
 document.querySelector(".adding_course").addEventListener("click", () => {
-    fetch("http://localhost:9000/admin/coursepost", {
+    fetch("https://crmuz.herokuapp.com/admin/coursepost", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

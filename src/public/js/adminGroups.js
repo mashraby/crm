@@ -18,7 +18,7 @@ for (let i = 0; i < sidebarItemLength; i++) {
 
 
 document.querySelector(".adding_groups").addEventListener("click", () => {
-    fetch("http://localhost:9000/admin/grouppost", {
+    fetch("https://crmuz.herokuapp.com/admin/grouppost", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -37,7 +37,7 @@ const putGroupDataTeacherId = document.querySelector("#exampleDataList445")
 
 document.querySelector(".table-body-groups").addEventListener("click", async(e) => {
     if (e.target.matches(".delete_btn_groups")) {
-        fetch(`http://localhost:9000/admin/groupdelete/${e.target.id}`, { method: "DELETE" })
+        fetch(`https://crmuz.herokuapp.com/admin/groupdelete/${e.target.id}`, { method: "DELETE" })
         window.location.reload()
     } else if (e.target.matches(".edit_btn_goups")) {
         const res = await fetch(`/admin/groupgetupdate/${e.target.id}`, { method: "PUT" })

@@ -7,7 +7,7 @@ const loginPassword = document.querySelector(".loginPassword")
 
 login.addEventListener("submit", (e) => {
     e.preventDefault()
-    fetch("http://localhost:9000/login", {
+    fetch("https://crmuz.herokuapp.com/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
