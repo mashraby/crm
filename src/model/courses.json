@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Web Dasturlash",
+    "price": "1200000"
+  },
+  {
+    "id": 2,
+    "name": "SMM PRO ",
+    "price": "500000"
+  },
+  {
+    "id": 3,
+    "name": "Android dasturlash",
+    "price": "1000000"
+  },
+  {
+    "id": 4,
+    "name": "Java Backend",
+    "price": "600000"
+  },
+  {
+    "id": 5,
+    "name": "Flutter",
+    "price": "1500000"
+  },
+  {
+    "id": 6,
+    "name": "UX/UI",
+    "price": "450000"
+  },
+  {
+    "id": 7,
+    "name": "Grafik Design ",
+    "price": "900000"
+  },
+  {
+    "id": 8,
+    "name": "IOS developersss",
+    "price": "2000000"
+  }
+]

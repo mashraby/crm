@@ -1,0 +1,16 @@
+[
+  {
+    "id": 3,
+    "name": "Javlon",
+    "homework_url": "http://localhost:9000/dorixona.zip",
+    "studentId": 11,
+    "groupId": 2
+  },
+  {
+    "id": 5,
+    "name": "Jaloliddin",
+    "homework_url": "http://localhost:9000/my_portfolio_bot.zip",
+    "studentId": 12,
+    "groupId": 2
+  }
+]

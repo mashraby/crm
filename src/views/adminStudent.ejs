@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <%- include("./components/sidebar", { user: user, data: data }) %>
+
+            <div class="app-content students-views">
+                <div class="app-content-header">
+                    <h1 class="app-content-headerText">Students</h1>
+                    <button class="mode-switch" title="Switch Theme">
+                    <svg class="moon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="24" height="24" viewBox="0 0 24 24">
+                    <defs></defs>
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+                </button>
+                    <button class="app-content-headerButton" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal60">Add Students</button>
+                </div>
+                <div class="app-content-actions">
+                    <input class="search-bar" placeholder="Search..." type="text">
+                </div>
+                <div class="products-area-wrapper tableView">
+                    <div class="products-header">
+                        <div class="product-cell image">
+                            <h6 href="#" class="sort-button">
+                                <span>ID</span>
+                            </h6>
+                        </div>
+                        <div class="product-cell image">
+                            <h6 href="#" class="sort-button">
+                                <span>Name</span>
+                            </h6>
+                        </div>
+                        <div class="product-cell image">
+                            <h6 href="#" class="sort-button">
+                                <span>Group</span>
+                            </h6>
+                        </div>
+                        <div class="product-cell image">
+                            <h6 href="#" class="sort-button">
+                                <span>Teacher</span>
+                            </h6>
+                        </div>
+                        <div class="product-cell image">
+                            <h6 href="#" class="sort-button">
+                                <span>Edit/Delete</span>
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="table-body-students">
+                        <% students.map((s, index) => { %>
+                            <div class="products-row">
+                                <button class="cell-more-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+                            </button>
+                                <div class="product-cell image">
+                                    <span><%= index + 1 %></span>
+                                </div>
+                                <div class="product-cell category"><span class="cell-label">Name:</span>
+                                    <%= s.name %>
+                                </div>
+                                <div class="product-cell stock"><span class="cell-label">Groups:</span>
+                                    <% groups.map(g => { %>
+                                        <% if(g.id == s.groupId) { %>
+                                            <%= g.name %>
+                                                <% } %>
+                                                    <% }) %>
+                                </div>
+                                <div class="product-cell price"><span class="cell-label">Salary:</span>
+                                    <% teachers.map(t => { %>
+                                        <% groups.map(g => { %>
+                                            <% if(t.id == g.teacherId) { %>
+                                                <% if(g.id == s.groupId) { %>
+                                                    <%= t.name %>
+                                                        <% } %>
+                                                            <% } %>
+                                                                <% }) %>
+                                                                    <% }) %>
+                                </div>
+                                <div class="product-cell image">
+                                    <button id="<%= s.id %>" data-bs-toggle="modal" data-bs-target="#exampleModal2003" data-bs-whatever="@mdo" class="edit_btn_students bi bi-pencil-square">
+                                </button>
+                                    <button id="<%= s.id %>" class="delete_btn_student bi bi-trash3">
+                                </button>
+                                </div>
+
+                                <div>
+                                    <div class="modal fade" id="exampleModal2003" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">
+                                                        Update Student
+                                                    </h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <label for="exampleDataList2006" class="form-label">Student Name</label>
+                                                    <input class="form-control" type="text" name="name" value="" list="datalistOptions" id="exampleDataList2006" required placeholder="Name create...">
+                                                    <label for="exampleDataList2005" class="form-label">Student accaunt password</label>
+                                                    <input class="form-control" type="password" name="password" value="" list="datalistOptions" id="exampleDataList2005" minlength="8" maxlength="8" required placeholder="Student accaunt password...">
+                                                    <label for="exampleDataList2004" class="form-label">which course he is studying</label>
+                                                    <select name="groupId" id="exampleDataList2004" class="form-select" aria-label="Default select example">
+                                                    <option selected>which course he teaches</option>
+                                                    <% groups.map(g => { %>
+                                                        <option value="<%= g.id %>"><%= g.name %></option>
+                                                    <% }) %>    
+                                                </select>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <button id="<%= s.id %>" type="button" class="btn btn-primary updated_btn_students">Updated Student</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <% }) %>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="exampleModal60" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <form action="/admin/coursepost" class="modal-content" method="POST" enctype="application/x-www-form-urlencoded">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Add Student</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <label for="exampleDataList901" class="form-label">Student Name</label>
+                            <input class="form-control" type="text" name="name" list="datalistOptions" id="exampleDataList901" required placeholder="Name create...">
+                            <label for="exampleDataList900" class="form-label">Student accaunt password</label>
+                            <input class="form-control" type="password" name="password" list="datalistOptions" id="exampleDataList900" minlength="8" maxlength="8" required placeholder="Student accaunt password...">
+                            <label for="exampleDataList899" class="form-label">which course he is studying</label>
+                            <select name="groupId" id="exampleDataList899" class="form-select" aria-label="Default select example">
+                            <option selected>which course he teaches</option>
+                            <% groups.map(g => { %>
+                                <option value="<%= g.id %>"><%= g.name %></option>
+                            <% }) %>    
+                        </select>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary adding_students">Add Student</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="/js/admin.js"></script>
+</body>
+
+</html>

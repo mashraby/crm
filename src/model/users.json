@@ -1,0 +1,354 @@
+[
+  {
+    "id": 1,
+    "name": "Mashrab",
+    "password": "11111111",
+    "role": "admin"
+  },
+  {
+    "id": 2,
+    "name": "Tohir",
+    "password": "22222222",
+    "salary": "12000000",
+    "role": "teacher",
+    "courseId": 1
+  },
+  {
+    "id": 3,
+    "name": "Alimardon",
+    "password": "33333333",
+    "role": "student",
+    "groupId": 1
+  },
+  {
+    "id": 4,
+    "name": "Baxtiyor",
+    "password": "44444444",
+    "salary": "12000000",
+    "role": "teacher",
+    "courseId": 2
+  },
+  {
+    "id": 5,
+    "name": "Jahongir",
+    "password": "55555555",
+    "salary": "12000000",
+    "role": "teacher",
+    "courseId": 3
+  },
+  {
+    "id": 6,
+    "name": "Hikmatjon",
+    "password": "92837492",
+    "salary": "12345678",
+    "role": "teacher",
+    "courseId": 8
+  },
+  {
+    "id": 7,
+    "name": "Eldor",
+    "password": "55557777",
+    "salary": "12000000",
+    "role": "teacher",
+    "courseId": 4
+  },
+  {
+    "id": 8,
+    "name": "Abubakr",
+    "password": "12345678",
+    "salary": "12000000",
+    "role": "teacher",
+    "courseId": 6
+  },
+  {
+    "id": 9,
+    "name": "Ali",
+    "password": "55446677",
+    "salary": "12000000",
+    "role": "teacher",
+    "courseId": 7
+  },
+  {
+    "id": 10,
+    "name": "Jo'rabek",
+    "password": "33333333",
+    "role": "student",
+    "groupId": 1
+  },
+  {
+    "id": 11,
+    "name": "Javlon",
+    "password": "33333333",
+    "role": "student",
+    "groupId": 2
+  },
+  {
+    "id": 12,
+    "name": "Jaloliddin",
+    "password": "33333333",
+    "role": "student",
+    "groupId": 2
+  },
+  {
+    "id": 13,
+    "name": "Abdurahmon",
+    "password": "33333333",
+    "role": "student",
+    "groupId": 2
+  },
+  {
+    "id": 14,
+    "name": "Abduaziz",
+    "password": "33333333",
+    "role": "student",
+    "groupId": 3
+  },
+  {
+    "id": 15,
+    "name": "Muhammadali",
+    "password": "33333333",
+    "role": "student",
+    "groupId": 3
+  },
+  {
+    "id": 16,
+    "name": "Mustafo",
+    "password": "33333333",
+    "role": "student",
+    "groupId": 3
+  },
+  {
+    "id": 17,
+    "name": "Panji",
+    "password": "33333333",
+    "role": "student",
+    "groupId": 4
+  },
+  {
+    "id": 18,
+    "name": "Bexruz",
+    "password": "33333333",
+    "role": "student",
+    "groupId": 4
+  },
+  {
+    "id": 19,
+    "name": "Navruz",
+    "password": "33333333",
+    "role": "student",
+    "groupId": 5
+  },
+  {
+    "id": 20,
+    "name": "Said",
+    "password": "33333333",
+    "role": "student",
+    "groupId": 5
+  },
+  {
+    "id": 21,
+    "name": "Laziz",
+    "password": "33333333",
+    "role": "student",
+    "groupId": 5
+  },
+  {
+    "id": 22,
+    "name": "Bobur",
+    "password": "33333333",
+    "role": "student",
+    "groupId": 6
+  },
+  {
+    "id": 23,
+    "name": "Shavkat",
+    "password": "33333333",
+    "role": "student",
+    "groupId": 6
+  },
+  {
+    "id": 24,
+    "name": "Ixtioyor",
+    "password": "33333333",
+    "role": "student",
+    "groupId": 6
+  },
+  {
+    "id": 25,
+    "name": "Doniyor",
+    "password": "33333333",
+    "role": "student",
+    "groupId": 7
+  },
+  {
+    "id": 26,
+    "name": "Abror",
+    "password": "33333333",
+    "role": "student",
+    "groupId": 7
+  },
+  {
+    "id": 27,
+    "name": "Muhammadrizo",
+    "password": "33333333",
+    "role": "student",
+    "groupId": 7
+  },
+  {
+    "id": 28,
+    "name": "Shukrullo",
+    "password": "33333333",
+    "role": "student",
+    "groupId": 8
+  },
+  {
+    "id": 29,
+    "name": "Abdulloh",
+    "password": "33333333",
+    "role": "student",
+    "groupId": 8
+  },
+  {
+    "id": 30,
+    "name": "Alisher",
+    "password": "33333333",
+    "role": "student",
+    "groupId": 8
+  },
+  {
+    "id": 31,
+    "name": "Sarvar",
+    "password": "33333333",
+    "role": "student",
+    "groupId": 8
+  },
+  {
+    "id": 32,
+    "name": "Javohir",
+    "password": "33333333",
+    "role": "student",
+    "groupId": 9
+  },
+  {
+    "id": 33,
+    "name": "Xurshid",
+    "password": "33333333",
+    "role": "student",
+    "groupId": 9
+  },
+  {
+    "id": 34,
+    "name": "Samariddin",
+    "password": "33333333",
+    "role": "student",
+    "groupId": 9
+  },
+  {
+    "id": 35,
+    "name": "Saida",
+    "password": "33333333",
+    "role": "student",
+    "groupId": 9
+  },
+  {
+    "id": 36,
+    "name": "Samat",
+    "password": "33333333",
+    "role": "student",
+    "groupId": 10
+  },
+  {
+    "id": 37,
+    "name": "Normat",
+    "password": "33333333",
+    "role": "student",
+    "groupId": 10
+  },
+  {
+    "id": 38,
+    "name": "G'ishmat",
+    "password": "33333333",
+    "role": "student",
+    "groupId": 10
+  },
+  {
+    "id": 39,
+    "name": "Toshmat",
+    "password": "33333333",
+    "role": "student",
+    "groupId": 10
+  },
+  {
+    "id": 40,
+    "name": "Eshmatjon",
+    "password": "333333ds",
+    "role": "student",
+    "groupId": "3"
+  },
+  {
+    "id": 41,
+    "name": "Mamarayim",
+    "password": "hbfsdjak",
+    "salary": "2000000",
+    "role": "teacher",
+    "courseId": 5
+  },
+  {
+    "id": 42,
+    "name": "Ahror",
+    "password": "jnfjdnxc",
+    "role": "student",
+    "groupId": 10
+  },
+  {
+    "id": 43,
+    "name": "Salima",
+    "password": "o12i345u",
+    "role": "student",
+    "groupId": 11
+  },
+  {
+    "id": 44,
+    "name": "Sevinch",
+    "password": "kskr9494",
+    "role": "student",
+    "groupId": 11
+  },
+  {
+    "id": 46,
+    "name": "Salmon",
+    "password": "102i9jfk",
+    "salary": "12000000",
+    "role": "teacher",
+    "courseId": 4
+  },
+  {
+    "id": 46,
+    "name": "Ajiguji",
+    "password": "gagajigu",
+    "role": "student",
+    "groupId": 12
+  },
+  {
+    "id": 47,
+    "name": "Gaybullajon",
+    "password": "323jhjke",
+    "role": "student",
+    "groupId": "12"
+  },
+  {
+    "id": 48,
+    "name": "Tohirdi shagirdi",
+    "password": "password",
+    "role": "student",
+    "groupId": 13
+  },
+  {
+    "id": 49,
+    "name": "sen Domilla",
+    "password": "bhfdvbcx",
+    "salary": "60000000",
+    "role": "teacher",
+    "courseId": "4"
+  }
+]

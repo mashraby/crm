@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "Web 17",
+    "homework": "uy ishini qilish uyga vazifa 2",
+    "teacherId": 2
+  },
+  {
+    "id": 2,
+    "name": "Web 18",
+    "homework": "sadddddddddd",
+    "teacherId": 2
+  },
+  {
+    "id": 3,
+    "name": "UX/UI",
+    "homework": "",
+    "teacherId": 4
+  },
+  {
+    "id": 4,
+    "name": "c#",
+    "homework": "",
+    "teacherId": 5
+  },
+  {
+    "id": 5,
+    "name": "C++",
+    "homework": "",
+    "teacherId": 6
+  },
+  {
+    "id": 6,
+    "name": "SMM",
+    "homework": "",
+    "teacherId": 7
+  },
+  {
+    "id": 7,
+    "name": "Android",
+    "homework": "",
+    "teacherId": 8
+  },
+  {
+    "id": 8,
+    "name": "3D MAX 16",
+    "homework": "",
+    "teacherId": 8
+  },
+  {
+    "id": 9,
+    "name": "3D MAX 17",
+    "homework": "",
+    "teacherId": 9
+  },
+  {
+    "id": 10,
+    "name": "Flutter 2",
+    "homework": "",
+    "teacherId": 9
+  },
+  {
+    "id": 11,
+    "name": "Flutter",
+    "homework": "",
+    "teacherId": 41
+  },
+  {
+    "id": 12,
+    "name": "SMM PRO MAX GOLD",
+    "homework": "",
+    "teacherId": 46
+  },
+  {
+    "id": 13,
+    "name": "Flutter standartttt 17",
+    "homework": "Nima uy ishi qilsalaring qiluringlar",
+    "teacherId": "2"
+  },
+  {
+    "id": 14,
+    "name": "chotkiy guruh",
+    "homework": "",
+    "teacherId": 5
+  }
+]

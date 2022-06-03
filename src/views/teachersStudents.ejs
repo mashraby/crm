@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/teacher.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="app-container">
+        <%- include("./components/teacherSidebar"), { data: data, user: user } %>
+
+            <div class="app-content students-teacher-views">
+                <div class="app-content-header">
+                    <h1 class="app-content-headerText">Students</h1>
+                    <button class="mode-switch" title="Switch Theme">
+                <svg class="moon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="24" height="24" viewBox="0 0 24 24">
+                <defs></defs>
+                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                </svg>
+            </button>
+                </div>
+                <div class="app-content-actions">
+                    <input class="search-bar" placeholder="Search..." type="text">
+                </div>
+                <div class="products-area-wrapper tableView">
+                    <div class="products-header">
+                        <div class="product-cell image">
+                            <h6 href="#" class="sort-button">
+                                <span>ID</span>
+                            </h6>
+                        </div>
+                        <div class="product-cell image">
+                            <h6 href="#" class="sort-button">
+                                <span>Your Students</span>
+                            </h6>
+                        </div>
+                        <div class="product-cell image">
+                            <h6 href="#" class="sort-button">
+                                <span>Group</span>
+                            </h6>
+                        </div>
+                        <div class="product-cell image">
+                            <h6 href="#" class="sort-button">
+                                <span>Homeworks</span>
+                            </h6>
+                        </div>
+                        <div class="product-cell image">
+                            <h6 href="#" class="sort-button">
+                                <span>attended class</span>
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="table-body-students-teacher">
+                        <% groups.map((g, index) => { %>
+                            <% if(user.id == g.teacherId) { %>
+                                <% students.map((s, index) => { %>
+                                    <% if(g.id == s.groupId) { %>
+                                        <div class="products-row">
+                                            <button class="cell-more-button">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+                                        </button>
+                                            <div class="product-cell image">
+                                                <span><%= index + 1 %></span>
+                                            </div>
+                                            <div class="product-cell category"><span class="cell-label">Name:</span>
+                                                <%= s.name %>
+                                            </div>
+                                            <div class="product-cell price"><span class="cell-label">students:</span>
+                                                <%= g.name %>
+                                            </div>
+                                            <div class="product-cell price"><span class="cell-label">Homework link:</span>
+                                                <% homeworks.map(h => { %>
+                                                    <% if(h.groupId == s.groupId && s.id == h.studentId) { %>
+                                                        <a class="bi bi-cloud-arrow-up-fill" style="margin: 6px; padding: 6px; color: black; background-color: rgb(125, 242, 0); border-radius: 3px;" href="<%= h.homework_url %>" download>
+                                                            <%= s.name %>'s Homework</a>
+                                                        <% } %>
+                                                            <% }) %>
+                                            </div>
+                                            <div class="product-cell stock"><span class="cell-label">Homework:</span>
+                                                <input class="checkbox_input" type="checkbox" id="switch<%= index + 1 %>" /><label class="checkbox_label" for="switch<%= index + 1 %>">Toggle</label>
+                                            </div>
+                                            <div>
+                                                <div class="modal fade" id="exampleModal777" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <form class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">
+                                                                    Add Homework
+                                                                </h5>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <label for="exampleDataList888" class="form-label">Homework</label>
+                                                                <input class="form-control" type="text" name="homework" list="datalistOptions" id="exampleDataList888" required placeholder="Homework...">
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                                <button id="<%= s.id %> liveToastBtn" type="button" class="btn btn-primary add_homework">Add Homework</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <% } %>
+                                            <% }) %>
+                                                <% } %>
+                                                    <% }) %>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="/js/teacher.js"></script>
+</body>
+
+</html>
